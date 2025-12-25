@@ -21,17 +21,33 @@
       <div class="calculator-screen">
         <div class="display">
           <div id="history" class="history"></div>
+          <div id="result" class="result">0</div>
         </div>
 
         <div class="buttons">
-          <button class="btn light-gray" onclick="clearDisplay()">AC</button>
-          <button class="btn light-gray" onclick="backspace()">⌫</button>
-          <button class="btn light-gray" onclick="appendValue('%')">%</button>
-          <button class="btn pink" onclick="appendValue('/')">÷</button>
+          <button class="btn light" onclick="clearDisplay()">AC</button>
+          <button class="btn light" onclick="backspace()">⌫</button>
+          <button class="btn light" onclick="appendValue('%')">%</button>
+          <button class="btn operator" onclick="appendValue('/')">÷</button>
 
-          <button class="btn dark-gray" onclick="appendValue('7')">7</button>
-          <button class="btn dark-gray" onclick="appendValue('8')">8</button>
-          <button class="btn pink" onclick="appendValue('8')">9</button>
+          <button class="btn" onclick="appendValue('7')">7</button>
+          <button class="btn" onclick="appendValue('8')">8</button>
+          <button class="btn" onclick="appendValue('8')">9</button>
+          <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+          <button class="btn" onclick="appendValue('7')">4</button>
+          <button class="btn" onclick="appendValue('8')">5</button>
+          <button class="btn" onclick="appendValue('8')">6</button>
+          <button class="btn operator" onclick="appendValue('/')">-</button>
+
+          <button class="btn" onclick="appendValue('7')">1</button>
+          <button class="btn" onclick="appendValue('8')">2</button>
+          <button class="btn" onclick="appendValue('8')">3</button>
+          <button class="btn operator" onclick="appendValue('/')">+</button>
+
+          <button class="btn zero" onclick="appendValue('0')">0</button>
+          <button class="btn" onclick="appendValue('.')">.</button>
+          <button class="btn operator" onclick="equals()">=</button>
         </div>
       </div>
     </div>
