@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:   -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Open Sans', Arial, Helvetica, sans-serif sans-serif;
+}
+
+:root {
+    --bg-pink: #fce4ec;
+    --bg-circle: #ff2d75;
+    --bg-dark: #333333;
+    --bg-light: #e5e5e5;
+    --font-white: #ffffff;
+    --font-black: #000000;
+    --font-pink: #ff2f92;
+}
+
+body {
+    background-color: var(--bg-pink);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-circle {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, var(--bg-circle), var(--font-pink));
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.phone-frame {
+    width: 260px;
+    height: 563px;
+    background-color: var(--font-black);
+    border: 6px solid #222;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    z-index: 10;
+    padding: 8px;
+}

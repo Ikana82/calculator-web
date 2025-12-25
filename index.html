@@ -3,7 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator Web App</title>
+    <title>Calculator Web Apps</title>
+
+    <link rel="icon" type="omage/png" href="calculator-icon.png" />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="background-circle"></div>
+
+    <div class="phone-frame">
+      <div class="dynamic-island"></div>
+      <div class="side-button power"></div>
+      <div class="side-button volume-up"></div>
+      <div class="side-button volume-down"></div>
+
+      <div class="calculator-screen">
+        <div class="display">
+          <div id="history" class="history"></div>
+        </div>
+
+        <div class="buttons">
+          <button class="btn light-gray" onclick="clearDisplay()">AC</button>
+          <button class="btn light-gray" onclick="backspace()">⌫</button>
+          <button class="btn light-gray" onclick="appendValue('%')">%</button>
+          <button class="btn pink" onclick="appendValue('/')">÷</button>
+
+          <button class="btn dark-gray" onclick="appendValue('7')">7</button>
+          <button class="btn dark-gray" onclick="appendValue('8')">8</button>
+          <button class="btn pink" onclick="appendValue('8')">9</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
