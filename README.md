@@ -31,7 +31,7 @@ To run this project locally or make your own modifications:
    git clone [https://github.com/Ikana82/calculator-web.git](https://github.com/Ikana82/calculator-web.git)
    ```
 
-2. **Masuk ke Folder Proyek**
+2. **Navigate to the Project Folder**
    ```bash
    cd calculator-web
    ```
