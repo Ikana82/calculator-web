@@ -32,7 +32,11 @@ function appendValue(val) {
       currentText = currentText.slice(0, -1).trimEnd();
     }
 
-    resultDisplay.innerText = currentText + " " + val + " ";
+    let visualOp = val;
+    if (val === "/") visualOp = "÷";
+    if (val === "*") visualOp = "×";
+
+    resultDisplay.innerText = currentText + " " + visualOp + " ";
     return;
   }
 
@@ -56,7 +60,12 @@ function equals() {
   try {
     historyDisplay.innerText = currentText;
 
-    let expression = currentText.split(" %").join("/100");
+    // Mengembalikan Text sesuai keterangan operator
+    let expression = currentText
+      .replaceAll("÷", "/")
+      .replaceAll("×", "*")
+      .split(" %")
+      .join("/100");
 
     let result = eval(expression);
 

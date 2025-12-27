@@ -1,7 +1,4 @@
-@font-face {
-  font-family: Calculator-Font;
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +11,7 @@
     --bg-pink: #fce4ec;
     --bg-circle: #ff2d75;
     --bg-dark: #3a3a3a;
-    --bg-light: #e5e5e5;
+    --bg-light: #f0efef;
     --font-white: #ffffff;
     --font-black: #000000;
     --font-pink: #ff2f92;
@@ -45,11 +42,11 @@ body {
     width: 260px;
     height: 563px;
     background-color: var(--font-black);
-    border: 6px solid #222;
-    border-radius: 30px;
+    border: 8px solid #222;
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
     z-index: 10;
     padding: 4px;
     position: relative;
@@ -57,25 +54,24 @@ body {
 
 .dynamic-island {
     position: absolute;
-    top: 18px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
     width: 80px;
-    height: 22px;
+    height: 25px;
     background-color: var(--font-black);
-    border: 1px solid var(--bg-dark);
     border-radius: 20px;
     z-index: 20;
 }
 
 .calculator-screen {
-    background-color: #151515;
+    background-color: #1a1a1a;
     flex: 1;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 20px;
     padding-top: 60px;
 }
 
@@ -86,22 +82,18 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     color: var(--font-white);
-    padding-right: 5px;
     margin-bottom: 20px;
 }
 
 .history {
     font-size: 20px;
     color: #8b8b8b;
-    min-height: 20px;
-    margin-bottom: 4px;
+    min-height: 10px;
 }
 
 .result {
-    font-family: 'Calculator-Font', sans-serif;
-    font-size: 42px;
-    font-weight: 600;
-    letter-spacing: -1px;
+    font-size: 40px;
+    font-weight: 400;
     white-space: pre-wrap; 
     word-wrap: break-word;
 }
@@ -109,7 +101,7 @@ body {
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 4px;
     justify-content: center;
     align-items: center;
 }
@@ -153,5 +145,28 @@ body {
 
 }
 
+.side-button {
+    position: absolute; 
+    background: #222; 
+    border-radius: 2px; 
+}
+.power { 
+    width: 3px; 
+    height: 60px; 
+    right: -9px; 
+    top: 150px; 
+}
+.volume-up { 
+    width: 3px; 
+    height: 40px; 
+    left: -9px; 
+    top: 120px; 
+}
+.volume-down { 
+    width: 3px; 
+    height: 40px; 
+    left: -9px; 
+    top: 170px; 
+}
 
 
