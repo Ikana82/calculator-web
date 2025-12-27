@@ -26,6 +26,12 @@ A web-based calculator application designed with a modern aesthetic inspired by 
 To run this project locally or make your own modifications:
 
 1. **Clone the Repository**
+
    ```bash
    git clone [https://github.com/Ikana82/calculator-web.git](https://github.com/Ikana82/calculator-web.git)
+   ```
+
+2. **Masuk ke Folder Proyek**
+   ```bash
+   cd calculator-web
    ```
