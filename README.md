@@ -37,10 +37,5 @@ To run this project locally or make your own modifications:
    cd calculator-web
    ```
 
-3. **Buka File**
-   Cukup klik dua kali pada file `index.html` atau gunakan ekstensi "Live Server" di VS Code.
-
-## 🔗 Tautan Penting
-
-- **Live Demo:** [Lihat Kalkulator Di Sini](https://ikana82.github.io/calculator-web/)
-- **Repository:** [Ikana82/calculator-web](https://github.com/Ikana82/calculator-web)
+3. **Open the File**
+   Simply double-click `index.html` or use the Live Server extension in VS Code.
