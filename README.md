@@ -4,27 +4,28 @@
   <img src="https://img.shields.io/badge/demo-live-pink.svg?style=for-the-badge" alt="Live Demo">
 </a>
 
-Sebuah aplikasi kalkulator berbasis web yang dirancang dengan estetika modern terinspirasi dari UI iOS/iPhone. Proyek ini menonjolkan kebersihan desain dan fungsionalitas yang responsif.
+A web-based calculator application designed with a modern aesthetic inspired by the iOS/iPhone UI. This project emphasizes clean design, responsive functionality, and a smooth user experience.
 
-## ✨ Fitur Utama
+---
 
-- **iOS Glassmorphism Design**: Tampilan gelap yang elegan dengan aksen warna pink yang kontras.
-- **Smart Calculation**: Mendukung operasi dasar matematika, persentase, dan desimal.
-- **Clean Code**: Ditulis menggunakan Vanilla HTML, CSS, dan JavaScript tanpa framework tambahan.
-- **Number Formatting**: Output hasil otomatis menggunakan format ribuan (koma).
+## ✨ Key Features
+
+- **iOS Glassmorphism Design**: Elegant dark interface with high-contrast pink accents.
+- **Smart Calculation**: Supports basic arithmetic operations, percentages, and decimals.
+- **Clean Code**: Built using Vanilla HTML, CSS, and JavaScript without external frameworks or libraries.
 
 ## 🚀 Tech Stack
 
-- **HTML5**: Struktur semantik.
-- **CSS3**: Flexbox, CSS Grid, Custom Variables, dan Animasi.
-- **JavaScript (ES6)**: Logika perhitungan, manipulasi DOM, dan formatting angka.
-- **Google Fonts**: Menggunakan font 'Poppins' untuk tipografi yang modern.
+- **HTML5**: Semantic document structure.
+- **CSS3**: Flexbox, CSS Grid, Custom Variables (CSS Variables), and UI animations.
+- **JavaScript (ES6)**: Core calculation logic, DOM manipulation, and number formatting.
+- **Google Fonts**: Utilizing 'Poppins' for modern and clean typography.
 
-## 🛠️ Cara Instalasi & Penggunaan
+## 🛠️ Installation & Usage
 
-Jika Anda ingin menjalankan proyek ini secara lokal atau melakukan modifikasi:
+To run this project locally or make your own modifications:
 
-1. **Clone Repository**
+1. **Clone the Repository**
    ```bash
    git clone [https://github.com/Ikana82/calculator-web.git](https://github.com/Ikana82/calculator-web.git)
    ```
