@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Web Apps</title>
 
-    <link rel="icon" type="omage/png" href="calculator-icon.png" />
+    <link rel="icon" type="omage/png" href="calculator-icon-pink.png" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="background-circle"></div>
@@ -26,7 +35,12 @@
 
         <div class="buttons">
           <button class="btn light" onclick="clearDisplay()">AC</button>
-          <button class="btn light" onclick="backspace()">⌫</button>
+          <div class="btn light">
+            <button class="btn light" onclick="backspace()">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </div>
+          <!-- <button class="btn light" onclick="backspace()">⌫</button> -->
           <button class="btn light" onclick="appendValue('%')">%</button>
           <button class="btn operator" onclick="appendValue('/')">÷</button>
 
