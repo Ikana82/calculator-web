@@ -1,13 +1,13 @@
+@font-face {
+  font-family: Calculator-Font;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter';
-}
-
-@font-face {
-  font-family: Calculator-Font;
-  src: url(./Roboto-Medium.ttf);
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -98,9 +98,12 @@ body {
 }
 
 .result {
+    font-family: 'Calculator-Font', sans-serif;
     font-size: 42px;
     font-weight: 600;
     letter-spacing: -1px;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
 }
 
 .buttons {

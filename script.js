@@ -2,11 +2,15 @@ let isFinished = false;
 
 function appendValue(val) {
   const resultDisplay = document.getElementById("result");
+  const historyDisplay = document.getElementById("history");
   const operators = ["+", "-", "*", "/"];
+
   let currentText = resultDisplay.innerText;
 
+  // Reset Setekah Klik '='
   if (isFinished) {
-    let cleanNumber = currentText.replace("=", "");
+    let cleanNumber = currentText.replace("=", "").trim();
+
     if (operators.indexOf(val) !== -1 || val === "%") {
       currentText = cleanNumber;
     } else {
@@ -15,22 +19,24 @@ function appendValue(val) {
     isFinished = false;
   }
 
+  //  Normalisasi nol di awal, atau menampilkan 0 diawal
   if (currentText === "0" && val !== ".") {
     currentText = "";
   }
 
   if (operators.indexOf(val) !== -1) {
-    let currentText = resultDisplay.innerText.trimEnd();
+    currentText = currentText.trimEnd();
     let lastChar = currentText.slice(-1);
 
     if (operators.indexOf(lastChar) !== -1) {
       currentText = currentText.slice(0, -1).trimEnd();
     }
 
-    resultDisplay.innerText = currentText + " " + val + "  ";
+    resultDisplay.innerText = currentText + " " + val + " ";
     return;
   }
 
+  // Titik Desimal
   if (val == ".") {
     let parts = currentText.split(" ");
     let lastPart = parts[parts.length - 1];
@@ -67,7 +73,7 @@ function backspace() {
   let currentText = resultDisplay.innerText;
 
   if (isFinished || currentText === "Error!") {
-    clearDispplay();
+    clearDisplay();
   } else if (currentText.endsWith(" ")) {
     if (currentText.endsWith(" %")) {
       resultDisplay.innerText = currentText.slice(0, -2);
