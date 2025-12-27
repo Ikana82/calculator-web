@@ -5,6 +5,11 @@
     font-family: 'Inter';
 }
 
+@font-face {
+  font-family: Calculator-Font;
+  src: url(./Roboto-Medium.ttf);
+}
+
 :root {
     --bg-pink: #fce4ec;
     --bg-circle: #ff2d75;
@@ -66,7 +71,7 @@ body {
 .calculator-screen {
     background-color: #151515;
     flex: 1;
-    border-radius: 35px;
+    border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;

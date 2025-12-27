@@ -10,7 +10,7 @@ function appendValue(val) {
     if (operators.indexOf(val) !== -1 || val === "%") {
       currentText = cleanNumber;
     } else {
-      currentText = "";
+      currentText = ""; // Jika klik angka, layar bersih
     }
     isFinished = false;
   }
@@ -18,4 +18,71 @@ function appendValue(val) {
   if (currentText === "0" && val !== ".") {
     currentText = "";
   }
+
+  if (operators.indexOf(val) !== -1) {
+    let currentText = resultDisplay.innerText.trimEnd();
+    let lastChar = currentText.slice(-1);
+
+    if (operators.indexOf(lastChar) !== -1) {
+      currentText = currentText.slice(0, -1).trimEnd();
+    }
+
+    resultDisplay.innerText = currentText + " " + val + "  ";
+    return;
+  }
+
+  if (val == ".") {
+    let parts = currentText.split(" ");
+    let lastPart = parts[parts.length - 1];
+    if (lastPart.indexOf(".") !== -1) return;
+  }
+
+  resultDisplay.innerText = currentText + val;
+}
+
+function equals() {
+  const resultDisplay = document.getElementById("result");
+  const historyDisplay = document.getElementById("history");
+  let currentText = resultDisplay.innerText;
+
+  if (currentText === "" || currentText === "0") return;
+
+  try {
+    historyDisplay.innerText = currentText;
+
+    let expression = currentText.split(" %").join("/100");
+
+    let result = eval(expression);
+
+    resultDisplay.innerText = "= " + result;
+    isFinished = true;
+  } catch (error) {
+    resultDisplay.innerText = "Error!";
+    isFinished = true;
+  }
+}
+
+function backspace() {
+  const resultDisplay = document.getElementById("result");
+  let currentText = resultDisplay.innerText;
+
+  if (isFinished || currentText === "Error!") {
+    clearDispplay();
+  } else if (currentText.endsWith(" ")) {
+    if (currentText.endsWith(" %")) {
+      resultDisplay.innerText = currentText.slice(0, -2);
+    } else {
+      resultDisplay.innerText = currentText.slice(0, -3);
+    }
+  } else if (currentText.length <= 1) {
+    resultDisplay.innerText = "0";
+  } else {
+    resultDisplay.innerText = currentText.slice(0, -1);
+  }
+}
+
+function clearDisplay() {
+  document.getElementById("result").innerText = "0";
+  document.getElementById("history").innerText = "";
+  isFinished = false;
 }
